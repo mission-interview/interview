@@ -52,9 +52,9 @@ int TotalBTreeRec (int n) {
 	}
 
 	int sum = 0;
-  for (int i = 0; i < n; i++) {
-  	sum += TotalBTreeRec(i) * TotalBTreeRec(n-i-1);
-  }
+	for (int i = 0; i < n; i++) {
+		sum += TotalBTreeRec(i) * TotalBTreeRec(n-i-1);
+	}
   
   return sum;
 }
