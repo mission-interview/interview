@@ -4,6 +4,7 @@ using namespace std;
 
 /**
 * Given a preorder sequence how many unique trees can be created
+*
 * Solution is catalan number. Number of tree is exactly same
 * as number of unique BST create with array of size n (Assuming all numbers are different so nodes are different)
 *
@@ -39,7 +40,7 @@ int TotalBTreeDP (int n) {
     for(int i = 2; i <= n; i++) {
         int sum = 0;
 	for (int j = 0; j < i; j++) {
-	    sum += dp[j]*dp[i-j-1];
+	   sum += dp[j]*dp[i-j-1];
 	}
 	dp[i] = sum;
     }
